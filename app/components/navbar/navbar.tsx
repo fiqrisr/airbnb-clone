@@ -1,7 +1,10 @@
-import Container from "@/app/components/container";
+"use client";
+
+import { Container } from "@/app/components";
 
 import Logo from "./logo";
 import Search from "./search";
+import UserMenu from "./user-menu";
 
 const Navbar = () => {
   return (
@@ -11,6 +14,7 @@ const Navbar = () => {
           <div className="flex flex-grow items-center justify-between gap-3 md:gap-0">
             <Logo />
             <Search />
+            <UserMenu />
           </div>
         </Container>
       </div>
