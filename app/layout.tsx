@@ -1,3 +1,4 @@
+import { PropsWithChildren } from "react";
 import { Nunito } from "next/font/google";
 
 import "./globals.css";
@@ -13,11 +14,7 @@ const font = Nunito({
   subsets: ["latin"],
 });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
       <body className={font.className}>
