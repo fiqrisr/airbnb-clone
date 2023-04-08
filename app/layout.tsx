@@ -1,8 +1,16 @@
+import { PropsWithChildren } from "react";
 import { Nunito } from "next/font/google";
 
 import "./globals.css";
 
-import Navbar from "@/app/components/navbar";
+import {
+  ClientOnly,
+  RegisterModal,
+  LoginModal,
+  Navbar,
+} from "@/app/components";
+import { ToasterProvider } from "@/app/providers";
+import getCurrentUer from "@/app/actions/get-current-user";
 
 export const metadata = {
   title: "Airbnb",
@@ -13,15 +21,18 @@ const font = Nunito({
   subsets: ["latin"],
 });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default async function RootLayout({ children }: PropsWithChildren) {
+  const currentUser = await getCurrentUer();
+
   return (
     <html lang="en">
       <body className={font.className}>
-        <Navbar />
+        <ClientOnly>
+          <ToasterProvider />
+          <LoginModal />
+          <RegisterModal />
+          <Navbar currentUser={currentUser} />
+        </ClientOnly>
         {children}
       </body>
     </html>
