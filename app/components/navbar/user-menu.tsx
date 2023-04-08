@@ -2,16 +2,16 @@
 
 import { useCallback, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
-import { User } from "@prisma/client";
 import { signOut } from "next-auth/react";
 
 import { Avatar } from "@/app/components";
+import { SafeUser } from "@/app/types";
 
 import MenuItem from "./menu-item";
 import { useRegisterModal, useLoginModal } from "@/app/hooks";
 
 type UserMenuProps = {
-  currentUser?: User | null;
+  currentUser?: SafeUser | null;
 };
 
 const UserMenu = ({ currentUser }: UserMenuProps) => {
@@ -38,7 +38,7 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
         >
           <AiOutlineMenu />
           <div className="hidden md:block">
-            <Avatar />
+            <Avatar src={currentUser?.image} />
           </div>
         </div>
       </div>
