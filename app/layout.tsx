@@ -7,6 +7,7 @@ import {
   ClientOnly,
   RegisterModal,
   LoginModal,
+  RentModal,
   Navbar,
 } from "@/app/components";
 import { ToasterProvider } from "@/app/providers";
@@ -31,6 +32,7 @@ export default async function RootLayout({ children }: PropsWithChildren) {
           <ToasterProvider />
           <LoginModal />
           <RegisterModal />
+          <RentModal />
           <Navbar currentUser={currentUser} />
         </ClientOnly>
         {children}

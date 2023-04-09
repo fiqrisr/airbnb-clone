@@ -8,6 +8,7 @@ import {
   GiBoatFishing,
   GiCactus,
   GiCastle,
+  GiCaveEntrance,
   GiForestCamp,
   GiIsland,
   GiWindmill,
@@ -27,7 +28,7 @@ export const categories = [
   {
     label: "Windmills",
     icon: GiWindmill,
-    description: "This property has windmills!",
+    description: "This property is has windmills!",
   },
   {
     label: "Modern",
@@ -42,32 +43,37 @@ export const categories = [
   {
     label: "Pools",
     icon: TbPool,
-    description: "This property has a pool!",
+    description: "This is property has a beautiful pool!",
   },
   {
     label: "Islands",
     icon: GiIsland,
-    description: "This property has is on an island!",
+    description: "This property is on an island!",
   },
   {
     label: "Lake",
     icon: GiBoatFishing,
-    description: "This property has is close to a lake!",
+    description: "This property is near a lake!",
   },
   {
     label: "Skiing",
     icon: FaSkiing,
-    description: "This property has skiing activities!",
+    description: "This property has skiing activies!",
   },
   {
     label: "Castles",
     icon: GiCastle,
-    description: "This property is in a castle!",
+    description: "This property is an ancient castle!",
+  },
+  {
+    label: "Caves",
+    icon: GiCaveEntrance,
+    description: "This property is in a spooky cave!",
   },
   {
     label: "Camping",
     icon: GiForestCamp,
-    description: "This property has camping activities!",
+    description: "This property offers camping activities!",
   },
   {
     label: "Arctic",
