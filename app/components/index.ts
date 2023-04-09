@@ -4,6 +4,7 @@ export { default as CategoryBox } from "./category-box";
 export { default as Container } from "./container";
 export { default as Heading } from "./heading";
 export { default as Input, CategoryInput, CountrySelect } from "./inputs";
+export { default as Map } from "./map";
 export {
   default as Modal,
   RegisterModal,
