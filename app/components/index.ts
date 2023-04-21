@@ -8,6 +8,7 @@ export {
   CategoryInput,
   CountrySelect,
   Counter,
+  ImageUpload,
 } from "./inputs";
 export { default as Map } from "./map";
 export {
